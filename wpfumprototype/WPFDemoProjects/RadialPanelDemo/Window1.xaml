@@ -1,0 +1,13 @@
+﻿<Window x:Class="RadialPanelDemo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RadialPanelDemo" 
+    Title="RadialPanelDemo" Height="300" Width="300"
+    >
+  <local:RadialPanel x:Name="radialPanel">
+    <Button Content="Button One" local:RadialPanel.Angle="30" Opacity="0.5" />
+    <Button Content="Button Two" local:RadialPanel.Angle="90" Opacity="0.5" />
+    <Button Content="Button Three" local:RadialPanel.Angle="120" Opacity="0.5" />
+    <Button Content="Button Four" local:RadialPanel.Angle="250" Opacity="0.5" />
+  </local:RadialPanel>
+</Window>
