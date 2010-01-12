@@ -1,0 +1,80 @@
+﻿<Page x:Class="TreeViewDemo.MainPage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:View="clr-namespace:TreeViewDemo.Source.View"
+    Title="Main Page">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBarPanel HorizontalAlignment="Right">
+            <ToolBar Grid.Row="0">
+                <TextBlock>
+                <Hyperlink TextDecorations="None" Command="NavigationCommands.Refresh">
+                    <Image Height="18" Source="./Images/home.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <TextBlock>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/UsersDemoPage.xaml">
+                    <Image Height="18" Source="./Images/user1.png"></Image>
+                </Hyperlink>  
+                    <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
+                    <Image Height="18" Source="./Images/user1_add.png"></Image>
+                </Hyperlink>  
+                <Hyperlink IsEnabled="False" TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Image Height="18" Source="./Images/user1_lock.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <TextBlock>
+                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/GroupsDemoPage.xaml">
+                    <Image Height="18" Source="./Images/users3.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Image Height="18" Source="./Images/auction_hammer.png"></Image>
+                </Hyperlink>
+                <Separator></Separator>
+                <TextBox Width="40"></TextBox>
+            </ToolBar>
+        </ToolBarPanel>
+        <!--        <Image Grid.Row="1" Height="32" Source="./Images/Infor_Header.gif"></Image>-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="1" BorderBrush="Silver" BorderThickness="1">
+                <Frame Source="pack://siteoforigin:,,,/F1.htm"></Frame>
+            </Border>
+            <Border Grid.Column="0" BorderBrush="Silver" BorderThickness="1">
+                <StackPanel Margin="12,3">
+                    <TextBlock FontWeight="Bold">Go to:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="16" Source="./Images/link.png"></Image>
+                        <TextBlock FontFamily="Bold">
+                            <Hyperlink NavigateUri="./Source/UsersDemoPage.xaml">Users</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="16" Source="./Images/link.png"></Image>
+                        <TextBlock FontFamily="Bold">
+                            <Hyperlink NavigateUri="./Source/GroupsDemoPage.xaml">Groups</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="16" Source="./Images/link.png"></Image>
+                        <TextBlock FontFamily="Bold">
+                            <Hyperlink IsEnabled="False">Audit</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

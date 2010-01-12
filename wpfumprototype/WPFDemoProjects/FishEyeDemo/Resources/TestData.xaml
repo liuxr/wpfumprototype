@@ -1,0 +1,29 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+  <XmlDataProvider x:Key="Things" XPath="Things/Thing">
+    <x:XData>
+      <Things xmlns="">
+        <Thing Image="Aquarium.jpg" Width="50"/>
+        <Thing Image="Ascent.jpg" Width="50"/>
+        <Thing Image="Autumn.jpg" Width="50"/>
+        <Thing Image="Crystal.jpg" Width="50"/>
+        <Thing Image="DaVinci.jpg" Width="50"/>
+        <Thing Image="Follow.jpg" Width="50"/>
+        <Thing Image="Friend.jpg" Width="50"/>
+        <Thing Image="Home.jpg" Width="50"/>
+        <Thing Image="Moon flower.jpg" Width="50"/>
+        <Thing Image="Aquarium.jpg" Width="100"/>
+        <Thing Image="Ascent.jpg" Width="150"/>
+        <Thing Image="Autumn.jpg" Width="100"/>
+        <Thing Image="Crystal.jpg" Width="200"/>
+        <Thing Image="DaVinci.jpg" Width="100"/>
+        <Thing Image="Follow.jpg" Width="150"/>
+        <Thing Image="Friend.jpg" Width="100"/>
+        <Thing Image="Home.jpg" Width="50"/>
+        <Thing Image="Moon flower.jpg" Width="100"/>
+      </Things>
+    </x:XData>
+  </XmlDataProvider>
+</ResourceDictionary>
