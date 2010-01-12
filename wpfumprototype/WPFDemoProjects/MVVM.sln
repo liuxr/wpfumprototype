@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyPanels", "StickyPanel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadialPanelDemo", "RadialPanelDemo\RadialPanelDemo.csproj", "{4B870B1D-71C6-46C8-894B-75B79D3ED27C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDrop", "DragDrop\DragDrop.csproj", "{9F6CA767-AEDB-4851-9B61-F4C00E8F868A}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -71,6 +73,10 @@ Global
 		{4B870B1D-71C6-46C8-894B-75B79D3ED27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B870B1D-71C6-46C8-894B-75B79D3ED27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B870B1D-71C6-46C8-894B-75B79D3ED27C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6CA767-AEDB-4851-9B61-F4C00E8F868A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6CA767-AEDB-4851-9B61-F4C00E8F868A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6CA767-AEDB-4851-9B61-F4C00E8F868A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6CA767-AEDB-4851-9B61-F4C00E8F868A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
