@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="TreeViewDemo.Source.View.GroupDetailView" x:Name="DetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:formatters="clr-namespace:TreeViewDemo.Source.Formatting"
+    xmlns:views="clr-namespace:TreeViewDemo.Source.View"
+    >
+    <UserControl.Resources>
+        <formatters:GroupNameConverter x:Key="formatter"></formatters:GroupNameConverter>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Silver" BorderThickness="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Path=Name,
+                        Converter={StaticResource formatter},
+                        ConverterParameter='Details of Group &quot;\{0\}\&quot;'}"></TextBlock>
+
+                </StackPanel>
+                <TextBlock Text="&lt;TODO:Add some details here&gt;"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Silver" BorderThickness="1" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding Path=Name,
+                        Converter={StaticResource formatter},
+                        ConverterParameter='Members of Group &quot;\{0\}\&quot;'}"></TextBlock>
+                <views:UserListView x:Name="_usersListView" Grid.Row="1" ></views:UserListView>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
