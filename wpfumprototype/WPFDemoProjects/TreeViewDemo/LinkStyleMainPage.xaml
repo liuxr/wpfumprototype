@@ -49,28 +49,34 @@
                 <ColumnDefinition Width="*" ></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Border Grid.Column="1" BorderBrush="Silver" BorderThickness="1">
-                <Frame Source="pack://siteoforigin:,,,/F1.htm"></Frame>
+                <Frame Source="./IntroductionPage.xaml"></Frame>
             </Border>
             <Border Grid.Column="0" BorderBrush="Silver" BorderThickness="1">
                 <StackPanel Margin="12,3">
                     <TextBlock FontWeight="Bold">Go to:</TextBlock>
                     <StackPanel Orientation="Horizontal">
-                        <Image Height="16" Source="./Images/link.png"></Image>
-                        <TextBlock FontFamily="Bold">
+                        <Image Height="20" Source="./Images/user1.png"></Image>
+                        <TextBlock FontFamily="Bold" FontSize="20" >
                             <Hyperlink NavigateUri="./Source/UsersDemoPage.xaml">Users</Hyperlink>
                         </TextBlock>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <Image Height="16" Source="./Images/link.png"></Image>
-                        <TextBlock FontFamily="Bold">
+                        <Image Height="20" Source="./Images/users3.png"></Image>
+                        <TextBlock FontFamily="Bold" FontSize="20" >
                             <Hyperlink NavigateUri="./Source/GroupsDemoPage.xaml">Groups</Hyperlink>
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Image Height="16" Source="./Images/link.png"></Image>
-                        <TextBlock FontFamily="Bold">
+                        <Image Height="20" Source="./Images/link.png"></Image>
+                        <TextBlock FontFamily="Bold" FontSize="20" >
                             <Hyperlink IsEnabled="False">Audit</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="20" Source="./Images/link.png"></Image>
+                        <TextBlock FontFamily="Bold" FontSize="20" >
+                            <Hyperlink IsEnabled="False">Settings</Hyperlink>
                         </TextBlock>
                     </StackPanel>
                 </StackPanel>
