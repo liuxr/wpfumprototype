@@ -3,6 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:View="clr-namespace:TreeViewDemo.Source.View"
     Title="Main Page">
+    <Page.Background>
+        <LinearGradientBrush  StartPoint="0,1" EndPoint="0,0">
+            <GradientStop Color="#FCCC" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset=".5"/>
+        </LinearGradientBrush>
+    </Page.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
