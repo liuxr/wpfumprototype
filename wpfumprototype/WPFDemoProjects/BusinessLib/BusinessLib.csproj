@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DataAccess\FakeDataService.cs" />
     <Compile Include="DataModel\Group.cs" />
+    <Compile Include="DataModel\PreferredLanguage.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
