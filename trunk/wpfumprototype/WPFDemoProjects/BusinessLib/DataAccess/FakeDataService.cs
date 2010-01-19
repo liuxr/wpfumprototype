@@ -2,32 +2,41 @@
 using System.Collections.Generic;
 using BusinessLib.DataModel;
 
-namespace BusinessLib.DataAccess {
-    public class FakeDataService {
+namespace BusinessLib.DataAccess
+{
+    public class FakeDataService
+    {
         private static readonly Dictionary<string, Group> GroupsDict = new Dictionary<string, Group>();
         private static readonly Dictionary<string, User> UsersDict = new Dictionary<string, User>();
 
-        static FakeDataService() {
+        static FakeDataService()
+        {
             SetupFakeGroups();
             SetupFakeUsers();
         }
 
         #region CRUD Users
 
-        public static void UpdateUser(User user) {
+        public static void UpdateUser(User user)
+        {
             //Check existence
-            if (!UsersDict.ContainsKey(user.UserName)) {
+            if (!UsersDict.ContainsKey(user.UserName))
+            {
                 // Add it then
                 UsersDict.Add(user.UserName, user);
-            } else {
+            }
+            else
+            {
                 //Update
                 UsersDict[user.UserName] = user;
             }
         }
 
-        public static void DeleteUser(User user) {
+        public static void DeleteUser(User user)
+        {
             //Check existence
-            if (!UsersDict.ContainsKey(user.UserName)) {
+            if (!UsersDict.ContainsKey(user.UserName))
+            {
                 // Log and show
                 return;
             }
@@ -39,18 +48,22 @@ namespace BusinessLib.DataAccess {
 
         #region CRUD Group
 
-        public static void AddGroup(Group newGroup) {
+        public static void AddGroup(Group newGroup)
+        {
             //Check dup
-            if (GroupsDict.ContainsKey(newGroup.Name)) {
+            if (GroupsDict.ContainsKey(newGroup.Name))
+            {
                 return;
             }
             //Perform add
             GroupsDict.Add(newGroup.Name, newGroup);
         }
 
-        public static void UpdateGroup(Group group) {
+        public static void UpdateGroup(Group group)
+        {
             //Check existence
-            if (!GroupsDict.ContainsKey(group.Name)) {
+            if (!GroupsDict.ContainsKey(group.Name))
+            {
                 // Log and show
                 return;
             }
@@ -58,9 +71,11 @@ namespace BusinessLib.DataAccess {
             GroupsDict[group.Name] = group;
         }
 
-        public static void RemvoeGroup(Group group) {
+        public static void RemvoeGroup(Group group)
+        {
             //Check exitence
-            if (!GroupsDict.ContainsKey(group.Name)) {
+            if (!GroupsDict.ContainsKey(group.Name))
+            {
                 // Log and show
                 return;
             }
@@ -70,7 +85,8 @@ namespace BusinessLib.DataAccess {
 
         #endregion
 
-        private static void SetupFakeUsers() {
+        private static void SetupFakeUsers()
+        {
             var users = new[]
                             {
                                 new User("admin")
@@ -87,96 +103,139 @@ namespace BusinessLib.DataAccess {
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked
+                                    },
+                                new User("GGE")
+                                    {
+                                        Description = "Finance Manager",
+                                        GroupMembership =
+                                            {GroupsDict["SunSystems 5 User"], GroupsDict["AATOP"]},
+                                        FullName = "George Green",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
                                         LockStatus = LockStatus.Unlocked,
-
-                                        },
-                                    new User("GGE")
-                                        {
-                                                Description = "Finance Manager",
-                                                GroupMembership =
-                                                        { GroupsDict["SunSystems 5 User"], GroupsDict["AATOP"] }
-                                        },
-                                    new User("KKE")
-                                        {
-                                                Description = "Accounts Supervisor",
-                                                GroupMembership =
-                                                        { GroupsDict["SunSystems 5 User"], GroupsDict["ABMED"] }
-                                        },
-                                    new User("PK1")
-                                        {
-                                                Description = "PK1 Menu User 1",
-                                                GroupMembership =
-                                                        {
-                                                                GroupsDict["SunSystems 5 User"],
-                                                                GroupsDict["PK1"]
-                                                        }
-                                        },
-                                    new User("PK2")
-                                        {
-                                                Description = "PK1 Menu User 2",
-                                                GroupMembership =
-                                                        {
-                                                                GroupsDict["SunSystems 5 User"],
-                                                                GroupsDict["PK2"]
-                                                        }
-                                        },
-                                    new User("PK3")
-                                        {
-                                                Description = "Some Fool",
-                                                GroupMembership =
-                                                        {
-                                                                GroupsDict["SunSystems 5 User"],
-                                                                GroupsDict["PK1"]
-                                                        }
-                                        },
-                                    new User("SSM")
-                                        {
-                                                Description = "Accounts Clerk",
-                                                GroupMembership =
-                                                        {
-                                                                GroupsDict["SunSystems 5 User"],
-                                                                GroupsDict["BBLOW"]
-                                                        }
-                                        },
+                                        OperatorCode = "GGE",
+                                        LookupCode = "GGE",
+                                        ShortHeading = "GGE",
+                                        DefaultBusinessUnit = "PK1",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "A"
+                                    },
+                                new User("KKE")
+                                    {
+                                        Description = "Accounts Supervisor",
+                                        GroupMembership =
+                                            {GroupsDict["SunSystems 5 User"], GroupsDict["ABMED"]},
+                                        FullName = "Katrina Keep",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "KKE",
+                                        LookupCode = "KKE",
+                                        ShortHeading = "KKE",
+                                        DefaultBusinessUnit = "PK1",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "A"
+                                    },
+                                new User("LOW")
+                                    {
+                                        Description = "Low Level User",
+                                        GroupMembership =
+                                            {GroupsDict["SunSystems 5 User"], GroupsDict["ABMED"]},
+                                        FullName = "Low Level User",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "LOW",
+                                        LookupCode = "LOW",
+                                        ShortHeading = "LOW",
+                                        DefaultBusinessUnit = "PK1",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "B",
+                                    },
+                                new User("PK1")
+                                    {
+                                        Description = "PK1 Menu User 1",
+                                        GroupMembership =
+                                            {
+                                                GroupsDict["SunSystems 5 User"],
+                                                GroupsDict["PK1"]
+                                            }
+                                    },
+                                new User("PK2")
+                                    {
+                                        Description = "PK1 Menu User 2",
+                                        GroupMembership =
+                                            {
+                                                GroupsDict["SunSystems 5 User"],
+                                                GroupsDict["PK2"]
+                                            }
+                                    },
+                                new User("PK3")
+                                    {
+                                        Description = "Some Fool",
+                                        GroupMembership =
+                                            {
+                                                GroupsDict["SunSystems 5 User"],
+                                                GroupsDict["PK1"]
+                                            }
+                                    },
+                                new User("SSM")
+                                    {
+                                        Description = "Accounts Clerk",
+                                        GroupMembership =
+                                            {
+                                                GroupsDict["SunSystems 5 User"],
+                                                GroupsDict["BBLOW"]
+                                            }
+                                    },
                             };
-            foreach (User user in users) {
+            foreach (User user in users)
+            {
 //                AddUser(user);
                 UsersDict[user.UserName] = user;
             }
         }
 
-        public static Group[] GetGroupsTree() {
+        public static Group[] GetGroupsTree()
+        {
             return new[]
                        {
-                               GroupsDict["Report Server Users"],
-                               GroupsDict["SunSystems 5 User"],
-                               GroupsDict["SunSystems Administrator"],
-                               GroupsDict["SunSystems Connect"],
+                           GroupsDict["Report Server Users"],
+                           GroupsDict["SunSystems 5 User"],
+                           GroupsDict["SunSystems Administrator"],
+                           GroupsDict["SunSystems Connect"],
                        };
         }
 
-        public static User[] GetUsers() {
+        public static User[] GetUsers()
+        {
             return new List<User>(UsersDict.Values).ToArray();
         }
 
-        private static void SetupFakeGroups() {
+        private static void SetupFakeGroups()
+        {
             var names = new[]
                             {
-                                    "Report Server Users",
-                                    "SunSystems 5 User",
-                                    "AATOP",
-                                    "ABMED",
-                                    "BBLOW",
-                                    "PK1",
-                                    "PK2",
-                                    "SunSystems Administrator",
-                                    "SunSystems Connect",
-                                    "Designers",
-                                    "Power Users",
-                                    "Users",
+                                "Report Server Users",
+                                "SunSystems 5 User",
+                                "AATOP",
+                                "ABMED",
+                                "BBLOW",
+                                "PK1",
+                                "PK2",
+                                "SunSystems Administrator",
+                                "SunSystems Connect",
+                                "Designers",
+                                "Power Users",
+                                "Users",
                             };
-            foreach (string name in names) {
-                AddGroup(new Group { Name = name });
+            foreach (string name in names)
+            {
+                AddGroup(new Group {Name = name});
                 //GroupsDict.Add(name, new Group { Name = name });
             }
             GroupsDict["SunSystems 5 User"].SubGroups.Add(GroupsDict["AATOP"]);
@@ -189,20 +248,26 @@ namespace BusinessLib.DataAccess {
             GroupsDict["SunSystems Connect"].SubGroups.Add(GroupsDict["Users"]);
         }
 
-        public static User[] GetGroupUsers(Group group) {
+        public static User[] GetGroupUsers(Group group)
+        {
             var users = new List<User>();
-            foreach (User user in UsersDict.Values) {
-                if (user.GroupMembership.Contains(group)) {
+            foreach (User user in UsersDict.Values)
+            {
+                if (user.GroupMembership.Contains(group))
+                {
                     users.Add(user);
                 }
             }
             return users.ToArray();
         }
 
-        public static Group[] GetGroups(params string[] strings) {
+        public static Group[] GetGroups(params string[] strings)
+        {
             var groups = new List<Group>();
-            foreach (string groupName in strings) {
-                if (GroupsDict.ContainsKey(groupName.Trim())) {
+            foreach (string groupName in strings)
+            {
+                if (GroupsDict.ContainsKey(groupName.Trim()))
+                {
                     groups.Add(GroupsDict[groupName.Trim()]);
                 }
             }
