@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BusinessLib.DataModel;
 
 namespace BusinessLib.DataAccess {
@@ -72,16 +73,22 @@ namespace BusinessLib.DataAccess {
         private static void SetupFakeUsers() {
             var users = new[]
                             {
-                                    new User("admin")
-                                        {
-                                                Description =
-                                                        "SunSystems administrator which can manage the users and groups",
-                                                GroupMembership =
-                                                        {
-                                                                GroupsDict["SunSystems 5 User"],
-                                                                GroupsDict["PK1"],
-                                                                GroupsDict["SunSystems Administrator"]
-                                                        }
+                                new User("admin")
+                                    {
+                                        Description =
+                                            "SunSystems administrator which can manage the users and groups",
+                                        GroupMembership =
+                                            {
+                                                GroupsDict["SunSystems 5 User"],
+                                                GroupsDict["PK1"],
+                                                GroupsDict["SunSystems Administrator"]
+                                            },
+                                        FullName = "System Administrator",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+
                                         },
                                     new User("GGE")
                                         {

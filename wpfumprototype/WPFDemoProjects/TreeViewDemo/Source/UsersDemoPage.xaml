@@ -13,30 +13,30 @@
             <ToolBar Grid.Row="0">
                 <TextBlock>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MainPage2.xaml">
-                    <Image Height="18" Source="../Images/home.png"></Image>
+                    <Image Height="27" Source="../Images/home.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <TextBlock>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
-                    <Image Height="18" Source="../Images/user1_add.png"></Image>
+                    <Image Height="27" Source="../Images/user1_add.png"></Image>
                 </Hyperlink>  
                 <Hyperlink Command="{Binding Path=DeleteUserCommand}"  TextDecorations="None">
-                    <Image Height="18" Source="../Images/user1_delete.png"></Image>
+                    <Image Height="27" Source="../Images/user1_delete.png"></Image>
                 </Hyperlink>
                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="../Images/user1_lock.png"></Image>
+                    <Image Height="27" Source="../Images/user1_lock.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <TextBlock>
                      <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/GroupsDemoPage.xaml">
-                    <Image Height="18" Source="../Images/users3.png"></Image>
+                    <Image Height="27" Source="../Images/users3.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="../Images/auction_hammer.png"></Image>
+                    <Image Height="27" Source="../Images/auction_hammer.png"></Image>
                 </Hyperlink>
                 <Separator></Separator>
                 <TextBox Width="40"></TextBox>
