@@ -15,8 +15,10 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ToolBarPanel HorizontalAlignment="Right">
-            <ToolBar Grid.Row="0">
+        <StackPanel Background="#FF6495ED" Grid.Row="0"></StackPanel>
+        
+        <ToolBarPanel HorizontalAlignment="Right" Grid.Row="0" >
+            <ToolBar >
                 <TextBlock>
                 <Hyperlink TextDecorations="None" Command="NavigationCommands.Refresh">
                     <Image Height="18" Source="./Images/home.png"></Image>
@@ -25,24 +27,24 @@
                 <Separator></Separator>
                 <TextBlock>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/UsersDemoPage.xaml">
-                    <Image Height="18" Source="./Images/user1.png"></Image>
+                    <Image Height="27" Source="./Images/user1.png"></Image>
                 </Hyperlink>  
                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
-                    <Image Height="18" Source="./Images/user1_add.png"></Image>
+                    <Image Height="27" Source="./Images/user1_add.png"></Image>
                 </Hyperlink>  
                 <Hyperlink IsEnabled="False" TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="./Images/user1_lock.png"></Image>
+                    <Image Height="27" Source="./Images/user1_lock.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <TextBlock>
                      <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/GroupsDemoPage.xaml">
-                    <Image Height="18" Source="./Images/users3.png"></Image>
+                    <Image Height="27" Source="./Images/users3.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="./Images/auction_hammer.png"></Image>
+                    <Image Height="27" Source="./Images/auction_hammer.png"></Image>
                 </Hyperlink>
                 <Separator></Separator>
                 <TextBox Width="40"></TextBox>

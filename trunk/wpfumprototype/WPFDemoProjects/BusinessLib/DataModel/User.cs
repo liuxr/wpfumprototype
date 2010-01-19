@@ -17,7 +17,35 @@ namespace BusinessLib.DataModel {
         }
 
         public string UserName { get; set; }
+        public string FullName { get; set; }
         public string Description { get; set; }
+        public string Title { get; set; }
+        public bool EnableStdAuthentication { get; set; }
+        public string Password { get; set; }
+        public bool ChangePassword { get; set; }
+        public string PreferredLanguage { get; set; }
+        public string Email { get; set; }
+        public DateTime LastLogonDate { get; set; }
+        public LockStatus LockStatus { get; set; }
+        public int InvalidAuthCount { get; set; }
+
+        public bool EnableWindowsAuth { get; set; }
+        public string WindowsAccount { get; set; }
+
+        public string OperatorCode { get; set; }
+        public string LookupCode { get; set; }
+        public string ShortHeading { get; set; }
+        public string DefaultBusinessUnit {get;set;}
+        public string Sun5Language { get; set; }
+        public string DefaultLedger { get; set; }
+        public string TemporaryWorkFolder { get; set; }
+
+        public bool EnableSun5Authorizer { get; set; }
+        public string AuthorizationPassword { get; set; }
+        public int InvalidAuthorizationCount { get; set; }
+
+        public bool EnableDirectoryAuth { get; set; }
+        public string DirectoryServiceAccount { get; set; }
 
         public string GetMembershipString() {
             string result = "";
