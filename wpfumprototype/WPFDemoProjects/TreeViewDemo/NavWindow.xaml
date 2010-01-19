@@ -1,0 +1,5 @@
+﻿<NavigationWindow x:Class="TreeViewDemo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="User Manager" Source="MainPage2.xaml">    
+</NavigationWindow>
