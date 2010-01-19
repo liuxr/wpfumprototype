@@ -16,6 +16,7 @@ namespace BusinessLib.DataModel {
             }
         }
 
+        //General user information
         public string UserName { get; set; }
         public string FullName { get; set; }
         public string Description { get; set; }
@@ -29,9 +30,11 @@ namespace BusinessLib.DataModel {
         public LockStatus LockStatus { get; set; }
         public int InvalidAuthCount { get; set; }
 
+        //Windows Authentication tab
         public bool EnableWindowsAuth { get; set; }
         public string WindowsAccount { get; set; }
 
+        //Sun5 plugin tab
         public string OperatorCode { get; set; }
         public string LookupCode { get; set; }
         public string ShortHeading { get; set; }
@@ -40,12 +43,15 @@ namespace BusinessLib.DataModel {
         public string DefaultLedger { get; set; }
         public string TemporaryWorkFolder { get; set; }
 
+        //Sun5 Authorization tab
         public bool EnableSun5Authorizer { get; set; }
         public string AuthorizationPassword { get; set; }
         public int InvalidAuthorizationCount { get; set; }
 
+        //Directory Serivce tab
         public bool EnableDirectoryAuth { get; set; }
         public string DirectoryServiceAccount { get; set; }
+
 
         public string GetMembershipString() {
             string result = "";

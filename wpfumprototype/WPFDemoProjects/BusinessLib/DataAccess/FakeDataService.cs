@@ -163,7 +163,18 @@ namespace BusinessLib.DataAccess
                                             {
                                                 GroupsDict["SunSystems 5 User"],
                                                 GroupsDict["PK1"]
-                                            }
+                                            },
+                                        FullName = "Mr PK1",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "PK1",
+                                        LookupCode = "PK1",
+                                        ShortHeading = "PK1",
+                                        DefaultBusinessUnit = "PK1",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "B",
                                     },
                                 new User("PK2")
                                     {
@@ -172,7 +183,18 @@ namespace BusinessLib.DataAccess
                                             {
                                                 GroupsDict["SunSystems 5 User"],
                                                 GroupsDict["PK2"]
-                                            }
+                                            },
+                                        FullName = "Mr PK2",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "PK2",
+                                        LookupCode = "PK2",
+                                        ShortHeading = "PK2",
+                                        DefaultBusinessUnit = "PK2",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "B"
                                     },
                                 new User("PK3")
                                     {
@@ -181,7 +203,18 @@ namespace BusinessLib.DataAccess
                                             {
                                                 GroupsDict["SunSystems 5 User"],
                                                 GroupsDict["PK1"]
-                                            }
+                                            },
+                                        FullName = "Mr PK3",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "PK3",
+                                        LookupCode = "PK3",
+                                        ShortHeading = "PK3",
+                                        DefaultBusinessUnit = "PK3",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "B"
                                     },
                                 new User("SSM")
                                     {
@@ -190,7 +223,18 @@ namespace BusinessLib.DataAccess
                                             {
                                                 GroupsDict["SunSystems 5 User"],
                                                 GroupsDict["BBLOW"]
-                                            }
+                                            },
+                                        FullName = "Stephen Smith",
+                                        Title = "",
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        LastLogonDate = DateTime.Today,
+                                        LockStatus = LockStatus.Unlocked,
+                                        OperatorCode = "SSM",
+                                        LookupCode = "SSM",
+                                        ShortHeading = "SSM",
+                                        DefaultBusinessUnit = "SSM",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        DefaultLedger = "B"
                                     },
                             };
             foreach (User user in users)
