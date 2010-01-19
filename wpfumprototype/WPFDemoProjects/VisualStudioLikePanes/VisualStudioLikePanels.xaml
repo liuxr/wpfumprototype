@@ -1,0 +1,81 @@
+﻿<Window x:Class="VisualStudioLikePanes.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Application with Collapsible, Dockable, Resizable Panes" Height="278" Width="456">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                ...
+            </Menu>
+            <StackPanel Name="buttonPanel" Orientation="Horizontal" DockPanel.Dock="Right" MouseEnter="buttonPanel_MouseEnter">
+                <StackPanel.LayoutTransform>
+                    <RotateTransform Angle="90"></RotateTransform>
+                </StackPanel.LayoutTransform>
+                <Button Name="panel1Button">Toolbox</Button>
+                <Button Name="panel2Button">Solution Explorer</Button>
+            </StackPanel>
+            
+            <Grid Name="parentGrid" Grid.IsSharedSizeScope="True">
+                <!-- Layer 0 -->
+                <Grid Name="layer0" MouseEnter="layer0_MouseEnter">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Name="title" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Blue" Foreground="White" FontSize="20">Start Page</Label>
+                    <GroupBox Grid.Row="1" Header="Recent Projects">
+                        ...
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" Header="Getting Started">
+                        ...
+                    </GroupBox>
+                    <GroupBox Grid.Row="3" Header="Headlines">
+                        ...
+                    </GroupBox>
+                    <GroupBox Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Header="Online Articles">
+                        <ListBox>
+                            <ListBoxItem>Artical #1</ListBoxItem>
+                            <ListBoxItem>Artical #2</ListBoxItem>
+                            <ListBoxItem>Artical #3</ListBoxItem>
+                            <ListBoxItem>Artical #4</ListBoxItem>
+                        </ListBox>
+                    </GroupBox>
+                </Grid>
+                
+                <!-- Layer 1 -->
+                <Grid Name="layer1" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="Auto" SharedSizeGroup="column1"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <DockPanel Grid.Row="0">
+                            <Button Name="panel1Pin" Width="26" DockPanel.Dock="Right" Background="White" Click="panel1Pin_Click">
+                                Pin
+                            </Button>
+                            <TextBlock Padding="8" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" DockPanel.Dock="Left">Toolbox</TextBlock>
+                        </DockPanel>
+                        <TextBlock Grid.Row="1">This is panel1</TextBlock>
+                    </Grid>
+                    <GridSplitter Width="5" Grid.Column="0" HorizontalAlignment="Right"></GridSplitter>
+                </Grid>
+
+                <!-- Layer 2-->
+            </Grid>                        
+            
+
+        </DockPanel>
+    </Grid>
+</Window>
