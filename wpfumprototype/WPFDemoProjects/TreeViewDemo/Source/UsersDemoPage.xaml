@@ -12,7 +12,7 @@
         <ToolBarPanel x:Name="_toolbar" HorizontalAlignment="Right" Grid.Row="0">
             <ToolBar Grid.Row="0">
                 <TextBlock>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MainPage2.xaml">
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/LinkStyleMainPage.xaml">
                     <Image Height="27" Source="../Images/home.png"></Image>
                 </Hyperlink>
                 </TextBlock>
