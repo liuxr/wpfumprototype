@@ -175,7 +175,6 @@
       <DependentUpon>UsersDemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\ViewModel\GroupsPageViewModel.cs" />
-    <Compile Include="Source\ViewModel\UserListSelectionModel.cs" />
     <Compile Include="Source\ViewModel\UserListViewModel.cs" />
     <Compile Include="Source\ViewModel\UserViewModel.cs" />
     <Compile Include="Source\View\GroupDetailView.xaml.cs">
