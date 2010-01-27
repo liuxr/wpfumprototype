@@ -29,6 +29,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +99,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\ListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\WhistlerBlueTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Source\GroupsDemoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,7 +123,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Source\View\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Source\View\UserDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Source\View\UserDetailPageNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +194,7 @@
     <Compile Include="Source\ViewModel\GroupsPageViewModel.cs" />
     <Compile Include="Source\ViewModel\UserListViewModel.cs" />
     <Compile Include="Source\ViewModel\UserViewModel.cs" />
+    <Compile Include="Source\ViewModel\UserViewModelNew.cs" />
     <Compile Include="Source\View\GroupDetailView.xaml.cs">
       <DependentUpon>GroupDetailView.xaml</DependentUpon>
     </Compile>
@@ -189,6 +207,9 @@
     <Compile Include="Source\View\SortAdorner.cs" />
     <Compile Include="Source\View\UserDetailPage.xaml.cs">
       <DependentUpon>UserDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\UserDetailPageNew.xaml.cs">
+      <DependentUpon>UserDetailPageNew.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\View\UserListView.xaml.cs">
       <DependentUpon>UserListView.xaml</DependentUpon>

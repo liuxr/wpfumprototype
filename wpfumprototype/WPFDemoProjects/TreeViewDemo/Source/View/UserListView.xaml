@@ -5,6 +5,8 @@
         <Style x:Key="ondblclkstyle" TargetType="{x:Type ListViewItem}">
             <EventSetter Event="MouseDoubleClick" Handler="OnDoubleClick" />
         </Style>        
+        
+        
     </UserControl.Resources>
     <ListView ItemsSource="{Binding Users}" x:Name="_listView"
               ItemContainerStyle="{StaticResource ondblclkstyle}" SelectionChanged="_listView_SelectionChanged">                
