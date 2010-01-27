@@ -1,8 +1,59 @@
-﻿<Page x:Class="TreeViewDemo.Source.View.UserDetailPageNew"
+﻿<Page x:Class="TreeViewDemo.Source.View.UserDetailPageNew"  x:Name="This"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="UserDetailPageNew">
-    <Grid>
-        
+      xmlns:formatters="clr-namespace:TreeViewDemo.Source.Formatting"
+    xmlns:views="clr-namespace:TreeViewDemo.Source.View"
+    Title="UserDetailPageNew"  KeepAlive="True">
+
+    <Page.Resources>
+        <formatters:UserMembershipConverter x:Key="formatter" />        
+    </Page.Resources>
+    <Grid Width="607">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBarPanel HorizontalAlignment="Right" Grid.Row="0" Grid.ColumnSpan="3">
+            <ToolBar Grid.Row="0">
+                <TextBlock>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MainPage2.xaml">
+                    <Image Height="27" Source="../../Images/home.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <TextBlock>
+                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/UsersDemoPage.xaml">
+                    <Image Height="27" Source="../../Images/user1.png"></Image>
+                </Hyperlink>  
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
+                    <Image Height="27" Source="../../Images/user1_add.png"></Image>
+                </Hyperlink>  
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Image Height="27" Source="../../Images/user1_lock.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <TextBlock>
+                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/GroupsDemoPage.xaml">
+                    <Image Height="27" Source="../../Images/users3.png"></Image>
+                </Hyperlink>
+                </TextBlock>
+                <Separator></Separator>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Image Height="27" Source="../../Images/auction_hammer.png"></Image>
+                </Hyperlink>
+                <Separator></Separator>
+                <TextBox Width="40"></TextBox>
+            </ToolBar>
+        </ToolBarPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel>
+                <Grid>
+                    <TextBlock>Place Holder</TextBlock>
+                </Grid>
+                <Line StrokeThickness="5"></Line>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
