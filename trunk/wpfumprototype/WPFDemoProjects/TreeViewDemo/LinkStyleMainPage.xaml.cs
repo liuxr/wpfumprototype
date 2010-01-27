@@ -18,9 +18,9 @@ namespace TreeViewDemo
     /// <summary>
     /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainPage2 : Page
+    public partial class LinkStyleMainPage : Page
     {
-        public MainPage2()
+        public LinkStyleMainPage()
         {
             InitializeComponent();
         }
