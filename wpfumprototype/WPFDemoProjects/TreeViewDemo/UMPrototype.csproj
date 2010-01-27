@@ -135,6 +135,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Source\View\UserGeneralPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Source\View\UserListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +214,9 @@
     </Compile>
     <Compile Include="Source\View\UserDetailPageNew.xaml.cs">
       <DependentUpon>UserDetailPageNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\UserGeneralPanel.xaml.cs">
+      <DependentUpon>UserGeneralPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\View\UserListView.xaml.cs">
       <DependentUpon>UserListView.xaml</DependentUpon>
