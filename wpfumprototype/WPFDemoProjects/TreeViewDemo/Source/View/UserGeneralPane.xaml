@@ -1,8 +1,91 @@
 ﻿<UserControl x:Class="TreeViewDemo.Source.View.UserGeneralPane"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="300" Width="300">
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Height="Auto" Width="Auto">
+    <UserControl.Resources>
+        <sys:Double x:Key="FontSize">11</sys:Double>
+        <GridLength x:Key="RowHeight">22</GridLength>
+    </UserControl.Resources>
     <Grid>
-            
-    </Grid>
+    <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="15"></ColumnDefinition>
+            <ColumnDefinition Width="340"></ColumnDefinition>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+            <ColumnDefinition Width="35"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <!--Margin-->
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Full Name</Label>
+        <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Description</Label>
+        <Label Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Title</Label>
+        <Label Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Standard Authentication</Label>
+        <Label Grid.Row="14" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Preferred Language</Label>
+        <Label Grid.Row="16" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Email Address</Label>
+        <Label Grid.Row="18" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Last Logon Date</Label>
+        <Label Grid.Row="20" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Lock Status</Label>
+        
+        <TextBox Name="_txbfullName" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding FullName}"/>
+        <TextBox Name="_txbDescription" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding Description}"/>
+        <TextBox Name="_txbTitle" Grid.Row="5" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding Title}"/>
+        
+        <Border Grid.Row="7" Grid.RowSpan="6" Grid.Column="3" BorderThickness="2" BorderBrush="MistyRose">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+                    <RowDefinition Height="7"></RowDefinition>
+                    <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+                    <RowDefinition Height="7"></RowDefinition>
+                    <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
+                    <RowDefinition Height="7"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <CheckBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="{StaticResource FontSize}" IsChecked="{Binding EnableStdAuthentication}">Enable Standard Authentication for this user</CheckBox>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource FontSize}">Password:   </Label>
+                <PasswordBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" IsEnabled="False" Password="123456"></PasswordBox>
+                <Button Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Center">. . .</Button>
+                <CheckBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource FontSize}" IsChecked="{Binding ChangePassword}">User must change password at next login</CheckBox>
+            </Grid>
+        </Border>
+        
+        <ComboBox Grid.Row="14" Grid.Column="3" Width="180" HorizontalAlignment="Left"  ItemsSource="{Binding PreferredLanguagesList}" SelectedItem="{Binding PreferredLanguage}"></ComboBox>
+        <TextBox Name="_txbEmail" Grid.Row="16" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding Email}"/>
+        <TextBox Name="_txbLastLogonDate" Grid.Row="18" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding LastLogonDate}"/>
+        <TextBox Name="_txbLockStatus" Grid.Row="20" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="{StaticResource FontSize}" Text="{Binding LockStatus}"/>               
+    </Grid>      
 </UserControl>

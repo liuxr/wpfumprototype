@@ -3689,20 +3689,20 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
                     <ControlTemplate.Resources>
-                        <Storyboard x:Key="HoverOn">
+                        <!--<Storyboard x:Key="HoverOn">
                             <DoubleAnimation Duration="00:00:00.1000000" Storyboard.TargetName="BackgroundGradientOver" Storyboard.TargetProperty="Opacity" To="0.73"/>
                         </Storyboard>
                         <Storyboard x:Key="HoverOff">
                             <DoubleAnimation Duration="00:00:00.4000000" Storyboard.TargetName="BackgroundGradientOver" Storyboard.TargetProperty="Opacity" To="0"/>
-                        </Storyboard>
-                        <Storyboard x:Key="SelectedOn">
+                        </Storyboard>-->
+                        <!--<Storyboard x:Key="SelectedOn">
                             <DoubleAnimation Duration="00:00:00.1000000" Storyboard.TargetName="BackgroundGradientSelected" Storyboard.TargetProperty="Opacity" To="0.84"/>
                             <DoubleAnimation Duration="00:00:00.1000000" Storyboard.TargetName="BackgroundGradientSelectedDisabled" Storyboard.TargetProperty="Opacity" To="1"/>
                         </Storyboard>
                         <Storyboard x:Key="SelectedOff">
                             <DoubleAnimation Duration="00:00:00.4000000" Storyboard.TargetName="BackgroundGradientSelected" Storyboard.TargetProperty="Opacity" To="0"/>
                             <DoubleAnimation Duration="00:00:00.4000000" Storyboard.TargetName="BackgroundGradientSelectedDisabled" Storyboard.TargetProperty="Opacity" To="0"/>
-                        </Storyboard>
+                        </Storyboard>-->
                     </ControlTemplate.Resources>
                     <Border SnapsToDevicePixels="true" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2" x:Name="border">
 
@@ -3716,15 +3716,15 @@
 
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
+                        <!--<Trigger Property="IsMouseOver" Value="True">
                             <Trigger.ExitActions>
                                 <BeginStoryboard Storyboard="{StaticResource HoverOff}" x:Name="HoverOff_BeginStoryboard"/>
                             </Trigger.ExitActions>
                             <Trigger.EnterActions>
                                 <BeginStoryboard Storyboard="{StaticResource HoverOn}"/>
                             </Trigger.EnterActions>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="true">
+                        </Trigger>-->
+                        <!--<Trigger Property="IsSelected" Value="true">
 
                             <Trigger.ExitActions>
                                 <BeginStoryboard x:Name="SelectedOff_BeginStoryboard" Storyboard="{StaticResource SelectedOff}"/>
@@ -3733,7 +3733,7 @@
                                 <BeginStoryboard x:Name="SelectedOn_BeginStoryboard" Storyboard="{StaticResource SelectedOn}"/>
                             </Trigger.EnterActions>
 
-                        </Trigger>
+                        </Trigger>-->
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
                             <Setter Property="Visibility" TargetName="BackgroundGradientSelected" Value="Hidden"/>

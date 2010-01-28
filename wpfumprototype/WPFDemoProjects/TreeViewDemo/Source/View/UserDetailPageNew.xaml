@@ -8,15 +8,15 @@
     <Page.Resources>
         <formatters:UserMembershipConverter x:Key="formatter" />        
     </Page.Resources>
-    <Grid Width="607">
+    <Grid Width="Auto">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <ToolBarPanel HorizontalAlignment="Right" Grid.Row="0" Grid.ColumnSpan="3">
+        <ToolBarPanel HorizontalAlignment="Left" Grid.Row="0" Grid.ColumnSpan="3">
             <ToolBar Grid.Row="0">
                 <TextBlock>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MainPage2.xaml">
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/LinkStyleMainPage.xaml">
                     <Image Height="27" Source="../../Images/home.png"></Image>
                 </Hyperlink>
                 </TextBlock>
@@ -46,13 +46,25 @@
                 <TextBox Width="40"></TextBox>
             </ToolBar>
         </ToolBarPanel>
-        <ScrollViewer Grid.Row="1">
+        <ScrollViewer Height="600" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <Grid>
-                    <TextBlock>Place Holder</TextBlock>
-                </Grid>
-                <Line StrokeThickness="5"></Line>
-
+                <views:UserHeaderPane></views:UserHeaderPane>
+                
+                <Expander Header="General User Information" IsExpanded="True">
+                <views:UserGeneralPane></views:UserGeneralPane>
+                    </Expander>
+                <Expander Header="Windows Authentication" IsExpanded="True">
+                <views:WindowsAuthenticationPane></views:WindowsAuthenticationPane>
+                    </Expander>
+                <Expander Header="SunSystems 5 User Information" IsExpanded="False">
+                <views:Sun5UserGeneralPane></views:Sun5UserGeneralPane>
+                    </Expander>
+                <Expander Header="SunSystems 5 Authorization" IsExpanded="False">
+                <views:Sun5UserAuthPane></views:Sun5UserAuthPane>
+                </Expander>
+                <Expander Header="Directory Service Authentication" IsExpanded="False">
+                <views:DirectoryServiceAuthenticationPane></views:DirectoryServiceAuthenticationPane>
+                </Expander>
             </StackPanel>
         </ScrollViewer>
     </Grid>

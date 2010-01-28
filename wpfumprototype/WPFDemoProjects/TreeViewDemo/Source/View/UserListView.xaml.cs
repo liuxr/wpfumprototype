@@ -40,13 +40,16 @@ namespace TreeViewDemo.Source.View {
         }
 
         private void OnDoubleClick(object sender, MouseButtonEventArgs e) {
-            var userViewModel = ((ListViewItem) sender).Content as UserViewModel; //Casting back to the binded Track}
-            if (userViewModel == null) {
+            //var userViewModel = ((ListViewItem) sender).Content as UserViewModel; //Casting back to the binded Track}
+            var userViewModelNew = ((ListViewItem)sender).Content as UserViewModelNew; //Casting back to the binded Track}
+            if (userViewModelNew == null) {
                 MessageBox.Show("Impossible", "Unexpected Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            var page = new UserDetailPage(userViewModel);
+
+            //var page = new UserDetailPage(userViewModel);
+            var page = new UserDetailPageNew(userViewModelNew);
             NavigationService.GetNavigationService(this).Navigate(page);
         }
 
@@ -56,7 +59,7 @@ namespace TreeViewDemo.Source.View {
         private void _listView_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             var model = DataContext as UserListViewModel;
             if (model != null) {
-                model.CurrentUser = _listView.SelectedItem as UserViewModel;
+                model.CurrentUser = _listView.SelectedItem as UserViewModelNew;
             }
         }
     }

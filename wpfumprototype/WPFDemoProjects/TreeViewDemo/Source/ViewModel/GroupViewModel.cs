@@ -72,9 +72,9 @@ namespace TreeViewDemo.Source.ViewModel {
             }
         }
 
-        public UserViewModel[] GetGroupUsers() {
+        public UserViewModelNew[] GetGroupUsers() {
             var users = FakeDataService.GetGroupUsers(_group);
-            return (from user in users select new UserViewModel(user)).ToArray();
+            return (from user in users select new UserViewModelNew(user)).ToArray();
         }
 
         public bool NameContainsText(string text) {
