@@ -1,0 +1,14 @@
+﻿<Page x:Class="TreeViewDemo.MockNavigatorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:TreeViewDemo.Controls"
+    Title="MockNavigatorPage" Width="795" Height="516">
+    <Page.Background>
+        <ImageBrush ImageSource="Navigator.png" />
+    </Page.Background>
+    <Grid>
+        <Canvas>
+            <Controls:Favourites Canvas.Left="50" Canvas.Top="50"/>
+        </Canvas>
+    </Grid>
+</Page>
