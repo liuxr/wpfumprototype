@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace TreeViewDemo.Source.View
 {
     /// <summary>
-    /// Interaction logic for UserGeneralPanel.xaml
+    /// Interaction logic for Sun5UserAuthPane.xaml
     /// </summary>
-    public partial class UserGeneralPanel : UserControl
+    public partial class Sun5UserAuthPane : UserControl
     {
-        public UserGeneralPanel()
+        public Sun5UserAuthPane()
         {
             InitializeComponent();
         }
