@@ -7,8 +7,8 @@ using TreeViewDemo.Source.Commands;
 namespace TreeViewDemo.Source.ViewModel {
     public class UserListViewModel : BaseViewModel {
         private readonly DeleteUserCommand _deleteUserCommand;
-        private readonly ObservableCollection<UserViewModel> _users;
-        private UserViewModel _currentUser;
+        private readonly ObservableCollection<UserViewModelNew> _users;
+        private UserViewModelNew _currentUser;
         //        private readonly SearchFamilyTreeCommand _searchCommand;
 
         public UserListViewModel() {
@@ -17,17 +17,17 @@ namespace TreeViewDemo.Source.ViewModel {
 
         public UserListViewModel(params User[] roots)
                 : this() {
-            _users = new ObservableCollection<UserViewModel>(
-                    (from temp in roots select new UserViewModel(temp)).ToList());
+            _users = new ObservableCollection<UserViewModelNew>(
+                    (from temp in roots select new UserViewModelNew(temp)).ToList());
         }
 
-        public UserListViewModel(params UserViewModel[] roots)
+        public UserListViewModel(params UserViewModelNew[] roots)
                 : this() {
-            _users = new ObservableCollection<UserViewModel>(
+            _users = new ObservableCollection<UserViewModelNew>(
                     (from temp in roots select temp).ToList());
         }
 
-        public ObservableCollection<UserViewModel> Users {
+        public ObservableCollection<UserViewModelNew> Users {
             get {
                 return _users;
             }
@@ -39,7 +39,7 @@ namespace TreeViewDemo.Source.ViewModel {
             }
         }
 
-        public UserViewModel CurrentUser {
+        public UserViewModelNew CurrentUser {
             get {
                 return _currentUser;
             }

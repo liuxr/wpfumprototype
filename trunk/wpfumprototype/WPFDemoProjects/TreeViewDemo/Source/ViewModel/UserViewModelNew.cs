@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using BusinessLib.DataAccess;
@@ -7,7 +8,7 @@ using BusinessLib.DataModel;
 
 namespace TreeViewDemo.Source.ViewModel
 {
-    public class UserViewModelNew: BaseViewModel
+    public class UserViewModelNew : BaseViewModel
     {
         private readonly User _user;
 
@@ -18,11 +19,12 @@ namespace TreeViewDemo.Source.ViewModel
 
         public UserViewModelNew(User user)
         {
+            _user = user;
             if(user == null)
             {
                 _user = new User("<User Name>");
             }
-            _user = user;
+            
         }
 
         public User User
@@ -172,7 +174,7 @@ namespace TreeViewDemo.Source.ViewModel
                 }
             }
         }
-        public int InvalidAuthCount
+        public int InvalidAuthenticationCount
         {
             get { return _user.InvalidAuthCount; }
             set
@@ -180,7 +182,7 @@ namespace TreeViewDemo.Source.ViewModel
                 if (_user.InvalidAuthCount != value)
                 {
                     _user.InvalidAuthCount = value;
-                    OnPropertyChanged("InvalidAuthCount");
+                    OnPropertyChanged("InvalidAuthenticationCount");
                 }
             }
         }
@@ -395,6 +397,29 @@ namespace TreeViewDemo.Source.ViewModel
             {
                 clone.AddGroupMembership(new GroupViewModel(group));
             }
+            clone.FullName = FullName;
+            clone.Title = Title;
+            clone.EnableStdAuthentication = EnableStdAuthentication;
+            clone.Password = Password;
+            clone.PreferredLanguage = PreferredLanguage;
+            clone.Email = Email;
+            clone.LastLogonDate = LastLogonDate;
+            clone.LockStatus = LockStatus;
+            clone.InvalidAuthenticationCount = InvalidAuthenticationCount;
+            clone.EnableWindowsAuth = EnableWindowsAuth;
+            clone.OperatorCode = OperatorCode;
+            clone.LookupCode = LookupCode;
+            clone.ShortHeading = ShortHeading;
+            clone.DefaultBusinessUnit = DefaultBusinessUnit;
+            clone.Sun5Language = Sun5Language;
+            clone.DefaultLedger = DefaultLedger;
+            clone.TemporaryWorkFolder = TemporaryWorkFolder;
+            clone.EnableSun5Authorizer = EnableSun5Authorizer;
+            clone.AuthorizationPassword = AuthorizationPassword;
+            clone.InvalidAuthorizationCount = InvalidAuthorizationCount;
+            clone.EnableDirectoryAuth = EnableDirectoryAuth;
+            clone.DirectoryServiceAccount = DirectoryServiceAccount;
+
             return clone;
         }
 
@@ -416,6 +441,9 @@ namespace TreeViewDemo.Source.ViewModel
         {
             FakeDataService.DeleteUser(_user);
         }
-    }
 
+        public List<String> PreferredLanguagesList{ 
+            get { return BusinessLib.DataModel.PreferredLanguage.Instance.SupportedLanguages; }
+            }
+        }
 }
