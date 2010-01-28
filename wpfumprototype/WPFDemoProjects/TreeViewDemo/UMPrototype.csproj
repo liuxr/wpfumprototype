@@ -294,9 +294,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Category\StandardCategory.10_Image.png" />
+    <Resource Include="Category\StandardCategory.11_Image.png" />
+    <Resource Include="Category\StandardCategory.12_Image.png" />
+    <Resource Include="Category\StandardCategory.13_Image.png" />
+    <Resource Include="Category\StandardCategory.14_Image.png" />
+    <Resource Include="Category\StandardCategory.15_Image.png" />
+    <Resource Include="Category\StandardCategory.16_Image.png" />
+    <Resource Include="Category\StandardCategory.19_Image.png" />
+    <Resource Include="Category\StandardCategory.1_Image.png" />
     <Content Include="F1.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="NavScreenShot.bmp" />
     <Resource Include="user1.png" />
     <Resource Include="Images\auction_hammer.png" />
     <Resource Include="Images\home.png" />
