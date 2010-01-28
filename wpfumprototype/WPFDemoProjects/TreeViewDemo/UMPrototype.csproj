@@ -297,6 +297,7 @@
     <Content Include="F1.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="user1.png" />
     <Resource Include="Images\auction_hammer.png" />
     <Resource Include="Images\home.png" />
   </ItemGroup>
