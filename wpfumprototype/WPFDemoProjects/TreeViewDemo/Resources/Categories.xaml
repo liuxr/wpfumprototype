@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <XmlDataProvider x:Key="Categories" XPath="Things/Thing">
+        <x:XData>
+            <Categories xmlns="">
+                <Category Image="Aquarium.jpg"/>
+                <Category Image="Ascent.jpg"/>
+                <Category Image="Autumn.jpg"/>
+                <Category Image="Crystal.jpg"/>
+                <Category Image="DaVinci.jpg"/>
+                <Category Image="Follow.jpg"/>
+                <Category Image="Friend.jpg"/>
+                <Category Image="Home.jpg"/>
+                <Category Image="Moon flower.jpg"/>
+            </Categories>
+        </x:XData>
+    </XmlDataProvider>
+</ResourceDictionary>

@@ -464,7 +464,7 @@
 
             <ItemsControl 
       Name="someFavourites" 
-      DataContext="{Binding Source={StaticResource Things}}" 
+      DataContext="{Binding Source={StaticResource Categories}}" 
       ItemsSource="{Binding}" Margin="10,30,0,0">
 
                 <ItemsControl.ItemsPanel>
