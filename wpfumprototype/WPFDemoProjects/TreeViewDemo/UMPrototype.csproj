@@ -79,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\Favourites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ErrorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +96,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ButtonStyleMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MockNavigatorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,6 +181,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\FanPanel.cs" />
+    <Compile Include="Controls\Favourites.xaml.cs">
+      <DependentUpon>Favourites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImagePathConverter.cs" />
     <Compile Include="ErrorPage.xaml.cs">
       <DependentUpon>ErrorPage.xaml</DependentUpon>
     </Compile>
@@ -184,6 +197,9 @@
     </Compile>
     <Compile Include="ButtonStyleMainPage.xaml.cs">
       <DependentUpon>ButtonStyleMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MockNavigatorPage.xaml.cs">
+      <DependentUpon>MockNavigatorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
@@ -306,6 +322,7 @@
     <Content Include="F1.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Navigator.png" />
     <Resource Include="NavScreenShot.bmp" />
     <Resource Include="user1.png" />
     <Resource Include="Images\auction_hammer.png" />
