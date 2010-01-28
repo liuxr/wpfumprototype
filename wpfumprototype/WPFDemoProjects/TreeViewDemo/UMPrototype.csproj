@@ -115,6 +115,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Source\View\DirectoryServiceAuthenticationPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Source\View\GroupDetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +131,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Source\View\Sun5UserAuthPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Source\View\Sun5UserGeneralPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Source\View\UserDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,7 +147,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Source\View\UserGeneralPanel.xaml">
+    <Page Include="Source\View\UserGeneralPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Source\View\UserHeaderPane.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +162,10 @@
     <Page Include="NavWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Source\View\WindowsAuthenticationPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -199,6 +219,9 @@
     <Compile Include="Source\ViewModel\UserListViewModel.cs" />
     <Compile Include="Source\ViewModel\UserViewModel.cs" />
     <Compile Include="Source\ViewModel\UserViewModelNew.cs" />
+    <Compile Include="Source\View\DirectoryServiceAuthenticationPane.xaml.cs">
+      <DependentUpon>DirectoryServiceAuthenticationPane.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Source\View\GroupDetailView.xaml.cs">
       <DependentUpon>GroupDetailView.xaml</DependentUpon>
     </Compile>
@@ -209,17 +232,29 @@
     <Compile Include="Source\ViewModel\GroupViewModel.cs" />
     <Compile Include="Source\ViewModel\BaseViewModel.cs" />
     <Compile Include="Source\View\SortAdorner.cs" />
+    <Compile Include="Source\View\Sun5UserAuthPane.xaml.cs">
+      <DependentUpon>Sun5UserAuthPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\Sun5UserGeneralPane.xaml.cs">
+      <DependentUpon>Sun5UserGeneralPane.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Source\View\UserDetailPage.xaml.cs">
       <DependentUpon>UserDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\View\UserDetailPageNew.xaml.cs">
       <DependentUpon>UserDetailPageNew.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Source\View\UserGeneralPanel.xaml.cs">
-      <DependentUpon>UserGeneralPanel.xaml</DependentUpon>
+    <Compile Include="Source\View\UserGeneralPane.xaml.cs">
+      <DependentUpon>UserGeneralPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\UserHeaderPane.xaml.cs">
+      <DependentUpon>UserHeaderPane.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\View\UserListView.xaml.cs">
       <DependentUpon>UserListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\View\WindowsAuthenticationPane.xaml.cs">
+      <DependentUpon>WindowsAuthenticationPane.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
