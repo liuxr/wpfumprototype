@@ -64,26 +64,26 @@
                     <TextBlock FontWeight="Bold">Go to:</TextBlock>
                     <StackPanel Orientation="Horizontal">
                         <Image Height="20" Source="./Images/user1.png"></Image>
-                        <TextBlock FontFamily="Bold" FontSize="20" >
+                        <TextBlock FontFamily="Bold" FontSize="12" >
                             <Hyperlink NavigateUri="./Source/UsersDemoPage.xaml">Users</Hyperlink>
                         </TextBlock>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
                         <Image Height="20" Source="./Images/users3.png"></Image>
-                        <TextBlock FontFamily="Bold" FontSize="20" >
+                        <TextBlock FontFamily="Bold" FontSize="12" >
                             <Hyperlink NavigateUri="./Source/GroupsDemoPage.xaml">Groups</Hyperlink>
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Image Height="20" Source="./Images/link.png"></Image>
-                        <TextBlock FontFamily="Bold" FontSize="20" >
+                        <TextBlock FontFamily="Bold" FontSize="12" >
                             <Hyperlink IsEnabled="False">Audit</Hyperlink>
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Image Height="20" Source="./Images/link.png"></Image>
-                        <TextBlock FontFamily="Bold" FontSize="20" >
+                        <TextBlock FontFamily="Bold" FontSize="12" >
                             <Hyperlink IsEnabled="False">Settings</Hyperlink>
                         </TextBlock>
                     </StackPanel>
