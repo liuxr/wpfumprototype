@@ -99,7 +99,7 @@
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Image Height="18" Source="../../Images/user1.png" />
+                                <Image Height="18" Source="{Binding UserIcon}" />
                                 <TextBlock Text="{Binding UserName}" />
                             </StackPanel>
                         </DataTemplate>                        

@@ -19,6 +19,7 @@ namespace BusinessLib.DataModel {
         //General user information
         public string UserName { get; set; }
         public string FullName { get; set; }
+        public string UserIcon { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
         public bool EnableStdAuthentication { get; set; }

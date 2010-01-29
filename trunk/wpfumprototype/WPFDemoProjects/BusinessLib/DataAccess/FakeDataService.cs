@@ -99,6 +99,7 @@ namespace BusinessLib.DataAccess
                                                 GroupsDict["PK1"],
                                                 GroupsDict["SunSystems Administrator"]
                                             },
+                                        UserIcon = "../../Images/UserPersonalIcon1.png",
                                         FullName = "System Administrator",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
@@ -111,6 +112,7 @@ namespace BusinessLib.DataAccess
                                         GroupMembership =
                                             {GroupsDict["SunSystems 5 User"], GroupsDict["AATOP"]},
                                         FullName = "George Green",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -128,6 +130,7 @@ namespace BusinessLib.DataAccess
                                         GroupMembership =
                                             {GroupsDict["SunSystems 5 User"], GroupsDict["ABMED"]},
                                         FullName = "Katrina Keep",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -145,6 +148,7 @@ namespace BusinessLib.DataAccess
                                         GroupMembership =
                                             {GroupsDict["SunSystems 5 User"], GroupsDict["ABMED"]},
                                         FullName = "Low Level User",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -165,6 +169,7 @@ namespace BusinessLib.DataAccess
                                                 GroupsDict["PK1"]
                                             },
                                         FullName = "Mr PK1",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -185,6 +190,7 @@ namespace BusinessLib.DataAccess
                                                 GroupsDict["PK2"]
                                             },
                                         FullName = "Mr PK2",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -205,6 +211,7 @@ namespace BusinessLib.DataAccess
                                                 GroupsDict["PK1"]
                                             },
                                         FullName = "Mr PK3",
+                                        UserIcon = "../../Images/user1.png",
                                         Title = "",
                                         PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
                                         LastLogonDate = DateTime.Today,
@@ -216,24 +223,25 @@ namespace BusinessLib.DataAccess
                                         Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
                                         DefaultLedger = "B"
                                     },
-                                new User("SSM")
+                                new User("SGW")
                                     {
-                                        Description = "Accounts Clerk",
+                                        Description = "Son of Gerald Wang",
                                         GroupMembership =
                                             {
                                                 GroupsDict["SunSystems 5 User"],
-                                                GroupsDict["BBLOW"]
+                                                GroupsDict["PK2"]
                                             },
-                                        FullName = "Stephen Smith",
+                                        FullName = "Frank Wang",
+                                        UserIcon = "../../Images/UserPersonalIcon2.png",
                                         Title = "",
-                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        PreferredLanguage = PreferredLanguage.Instance.SupportedLanguages[4],
                                         LastLogonDate = DateTime.Today,
                                         LockStatus = LockStatus.Unlocked,
-                                        OperatorCode = "SSM",
-                                        LookupCode = "SSM",
-                                        ShortHeading = "SSM",
-                                        DefaultBusinessUnit = "SSM",
-                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[0],
+                                        OperatorCode = "SGW",
+                                        LookupCode = "SGW",
+                                        ShortHeading = "SGW",
+                                        DefaultBusinessUnit = "SGW",
+                                        Sun5Language = PreferredLanguage.Instance.SupportedLanguages[4],
                                         DefaultLedger = "B"
                                     },
                             };

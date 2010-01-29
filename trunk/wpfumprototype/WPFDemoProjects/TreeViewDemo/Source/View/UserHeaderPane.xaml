@@ -40,7 +40,7 @@
                 <TextBlock Name="title" Text="ICON"  FontFamily="Tahoma Bold" Canvas.Left="11" Canvas.Top="5" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBlock Name="close" Text="Edit O" Canvas.Top="4" Canvas.Right="5" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Click to Select User Icon..."/>
                 <Path Name="line" Stroke="#FF777777" Fill="#FF777777" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="20" Canvas.Left="10" Width="96" Height="2" />
-                <Image Height="96" Width="90" Canvas.Left="13" Canvas.Top="24" Source="../../Images/user1.png" Stretch="Uniform" />
+                <Image Height="96" Width="90" Canvas.Left="13" Canvas.Top="24" Source="{Binding UserIcon}" Stretch="Uniform" />
             </Canvas>
         </Border>
     </Grid>
