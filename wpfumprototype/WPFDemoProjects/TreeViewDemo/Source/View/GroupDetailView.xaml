@@ -9,7 +9,7 @@
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Border BorderBrush="Silver" BorderThickness="1">
@@ -20,7 +20,7 @@
                         ConverterParameter='Details of Group &quot;\{0\}\&quot;'}"></TextBlock>
 
                 </StackPanel>
-                <TextBlock Text="&lt;TODO:Add some details here&gt;"></TextBlock>
+                <TextBlock Text="&lt;TODO:Groups Detail can be viewed here&gt;"></TextBlock>
             </StackPanel>
         </Border>
         <Border BorderBrush="Silver" BorderThickness="1" Grid.Row="1">

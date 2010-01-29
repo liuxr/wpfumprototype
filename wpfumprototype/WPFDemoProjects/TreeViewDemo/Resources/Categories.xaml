@@ -1,17 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <XmlDataProvider x:Key="Categories" XPath="Things/Thing">
+    <XmlDataProvider x:Key="Categories" XPath="Categories/Category">
         <x:XData>
             <Categories xmlns="">
-                <Category Image="Aquarium.jpg"/>
-                <Category Image="Ascent.jpg"/>
-                <Category Image="Autumn.jpg"/>
-                <Category Image="Crystal.jpg"/>
-                <Category Image="DaVinci.jpg"/>
-                <Category Image="Follow.jpg"/>
-                <Category Image="Friend.jpg"/>
-                <Category Image="Home.jpg"/>
-                <Category Image="Moon flower.jpg"/>
+                <Category Image="StandardCategory.1_Image.png" MenuItem="Demo Item(Empty)"/>
+                <Category Image="StandardCategory.10_Image.png" MenuItem="Demo Item(Empty)"/>
+                <Category Image="StandardCategory.15_Image.png" MenuItem="Demo Item(Empty)"/>
+                <Category Image="StandardCategory.16_Image.png" MenuItem="Demo Item(Empty)"/>
+                <Category Image="StandardCategory.19_Image.png" MenuItem="Demo Item(Empty)"/>
+                <Category Image="users3.png" MenuItem="User Manager(OGS)"/>                
             </Categories>
         </x:XData>
     </XmlDataProvider>

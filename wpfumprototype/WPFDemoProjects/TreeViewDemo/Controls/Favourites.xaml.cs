@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TreeViewDemo.Source;
 
 namespace TreeViewDemo.Controls
 {
@@ -40,8 +41,8 @@ namespace TreeViewDemo.Controls
         {
             if (!fan.IsWrapPanel)
             {
-                this.grid.Width = 660;
-                this.grid.Height = 550;
+                this.grid.Width = 320;
+                this.grid.Height = 320;
                 this.text.Visibility = Visibility.Collapsed;
                 fan.IsWrapPanel = true;
                 this.BeginStoryboard((Storyboard)grid.FindResource("expandPanel"));
@@ -56,7 +57,7 @@ namespace TreeViewDemo.Controls
         public void Hide()
         {
             fan.IsWrapPanel = false;
-            detailSlider.Value = detailSlider.Maximum;
+            detailSlider.Value = detailSlider.Minimum;
             this.BeginStoryboard((Storyboard)grid.FindResource("collapsePanel"));
         }
 
@@ -89,8 +90,16 @@ namespace TreeViewDemo.Controls
 
         void OnItemClick(object sender, RoutedEventArgs e)
         {
-            XmlDataProvider cvs = (XmlDataProvider)FindResource("Things");
-            object o = cvs.Data;
+            XmlDataProvider cvs = (XmlDataProvider)FindResource("Categories");
+            Image img = sender as Image;
+            if(img!=null)
+            {
+                if(img.Source.ToString().ToUpperInvariant().Contains("USERS3"))
+                {
+                    var page = new LinkStyleMainPage();
+                    NavigationService.GetNavigationService(this).Navigate(page);
+                }
+            }
             e.Handled = true;
         }
     }

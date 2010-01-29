@@ -17,11 +17,11 @@
         </Grid.RowDefinitions>
         <StackPanel Background="#FF6495ED" Grid.Row="0"></StackPanel>
         
-        <ToolBarPanel HorizontalAlignment="Right" Grid.Row="0" >
+        <ToolBarPanel  HorizontalAlignment="Left" Grid.Row="0" Width="770">
             <ToolBar >
                 <TextBlock>
                 <Hyperlink TextDecorations="None" Command="NavigationCommands.Refresh">
-                    <Image Height="18" Source="./Images/home.png"></Image>
+                    <Image Height="27" Source="./Images/home.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
@@ -29,7 +29,7 @@
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/UsersDemoPage.xaml">
                     <Image Height="27" Source="./Images/user1.png"></Image>
                 </Hyperlink>  
-                    <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
+                    <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPageNew.xaml">
                     <Image Height="27" Source="./Images/user1_add.png"></Image>
                 </Hyperlink>  
                 <Hyperlink IsEnabled="False" TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
@@ -43,11 +43,11 @@
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MockNavigatorPage.xaml">
                     <Image Height="27" Source="./Images/auction_hammer.png"></Image>
                 </Hyperlink>
                 <Separator></Separator>
-                <TextBox Width="40"></TextBox>
+                <TextBox Width="240"></TextBox>
             </ToolBar>
         </ToolBarPanel>
         <!--        <Image Grid.Row="1" Height="32" Source="./Images/Infor_Header.gif"></Image>-->

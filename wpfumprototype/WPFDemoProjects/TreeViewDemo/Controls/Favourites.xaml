@@ -3,6 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Controls="clr-namespace:TreeViewDemo.Controls"    
     >
+    <Canvas.Resources>
+        <ResourceDictionary>
+            <Controls:ImagePathConverter x:Key="ImagePathConverter" />
+        </ResourceDictionary>
+    </Canvas.Resources>
 
     <Rectangle Name="modal" Fill="Black" Opacity="0" Visibility="Collapsed" Width="4000" Height="4000" Canvas.Left="-900" Canvas.Top="-200"/>
     <Border Name="border" CornerRadius="10" Canvas.Top="0" Canvas.Left="0">
@@ -14,7 +19,7 @@
                 <Storyboard x:Key="expandPanel">
                     <ColorAnimation Storyboard.TargetProperty="(SolidColorBrush.Color)" Storyboard.TargetName="backgroundBrush" To="#ccffffff" BeginTime="0:00:00.250" Duration="0:00:00.050"/>
                     <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="border" To="100" Duration="0:00:00.300" AccelerationRatio="0.2" DecelerationRatio="0.7"/>
-                    <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="border" To="100" Duration="0:00:00.300" AccelerationRatio="0.2" DecelerationRatio="0.7"/>
+                    <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="border" To="50" Duration="0:00:00.300" AccelerationRatio="0.2" DecelerationRatio="0.7"/>
                     <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="modal" To="0.4" Duration="0:00:00.300" AccelerationRatio="0.2" DecelerationRatio="0.7"/>
                     <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="modal">
                         <DiscreteObjectKeyFrame Value="{x:Static Visibility.Visible}" KeyTime="00:00:00"/>
@@ -458,7 +463,7 @@
                 </ControlTemplate>
 
             </Grid.Resources>
-            <TextBlock Name="title" FontFamily="Verdana" Text="FAVOURITES" Margin="15,6,0,0" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+            <TextBlock Name="title" FontFamily="Verdana" Text="MY FAVOURITES" Margin="15,6,0,0" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
             <TextBlock Name="close" FontFamily="Verdana" Text="Close X" Margin="0,8,15,0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed"/>
             <Path Name="line" Stroke="#FF777777" Fill="#FF777777" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,28,15,0" Width="Auto" Height="1" Stretch="Fill" Data="M150,191 L432.17725,191" Visibility="Collapsed"/>
 
@@ -478,7 +483,14 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Source="{Binding Converter={StaticResource ImagePathConverter}, XPath=@Image}" Width="{Binding ElementName=detailSlider,Path=Value}" Margin="5" MouseLeftButtonUp="OnItemClick"/>
+                                    <Image Source="{Binding Converter={StaticResource ImagePathConverter}, XPath=@Image}" Width="{Binding ElementName=detailSlider,Path=Value}" Margin="5" MouseLeftButtonUp="OnItemClick">
+                                        <Image.ToolTip>
+                                            <StackPanel>
+                                                <TextBlock FontWeight="Bold" Text="{Binding XPath=@MenuItem}" ></TextBlock>
+                                                <TextBlock>Click to start..</TextBlock>
+                                            </StackPanel>
+                                        </Image.ToolTip>
+                                    </Image>
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -532,13 +544,13 @@
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,118,0,0" Width="12">
                 <TextBlock Name="counter" IsHitTestVisible="False" HorizontalAlignment="Center"/>
             </Grid>
-            <TextBlock Name="text" IsHitTestVisible="False" Text="FAVOURITES" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,140,0,0">
+            <TextBlock Name="text" IsHitTestVisible="False" Text="My FAVOURITES" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,100,0,0">
         <TextBlock.BitmapEffect>
           <OuterGlowBitmapEffect GlowColor="Black" GlowSize="2.5" />
         </TextBlock.BitmapEffect>
             </TextBlock>
-            <TextBlock Name="textDetail" Margin="0,0,160,16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="DETAIL LEVEL: 100%" Visibility="Collapsed"/>
-            <Slider Name="detailSlider" Margin="0,0,50,10" Template="{DynamicResource DetailSliderTemplate}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Minimum="50" Maximum="150" Value="150" Visibility="Collapsed"/>
+            <TextBlock Name="textDetail" Margin="0,0,160,16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="DETAIL LEVEL: 33%" Visibility="Collapsed"/>
+            <Slider Name="detailSlider" Margin="0,0,50,10" Template="{DynamicResource DetailSliderTemplate}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Minimum="50" Maximum="150" Value="50" Visibility="Collapsed"/>
         </Grid>
     </Border>
 </Canvas>
