@@ -8,6 +8,7 @@ namespace BusinessLib.DataModel {
 
         public User(string userName) {
             UserName = userName;
+            UserIcon = "../../Images/UserPersonalIcon1.png";
         }
 
         public IList<Group> GroupMembership {
