@@ -309,9 +309,9 @@
     <Resource Include="Images\logic_or.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\infor-um.png">
+    <Resource Include="Images\infor-um.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StandardCategory.10_Image.png" />
