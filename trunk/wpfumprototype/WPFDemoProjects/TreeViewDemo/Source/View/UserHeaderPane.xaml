@@ -4,8 +4,8 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Height="Auto" Width="Auto">
     <UserControl.Resources>
-        <sys:Double x:Key="FontSize">13</sys:Double>
-        <GridLength x:Key="RowHeight">24</GridLength>
+        <sys:Double x:Key="FontSize">12</sys:Double>
+        <GridLength x:Key="RowHeight">25</GridLength>
     </UserControl.Resources>
     <Grid >
         <Grid.ColumnDefinitions>
@@ -19,24 +19,29 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
             <!--Margin-->
             <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
-            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
             <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
             <RowDefinition Height="{StaticResource RowHeight}"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="8"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
             <!--Margin-->
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1"  Name="label1" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="{StaticResource FontSize}" FontFamily="Tahoma Bold">User Name:</Label>
-        <TextBox x:Name="_txbUserName" Grid.Column="3" Grid.Row="1" FontSize="{StaticResource FontSize}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="{Binding UserName}"/>
+        <TextBox x:Name="_txbUserName" Grid.Column="3" Grid.Row="1" FontSize="{StaticResource FontSize}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="{Binding UserName}" IsReadOnly="{Binding IsReadOnlyUserName}"/>
         <Label Grid.Column="1" Grid.Row="3" FontSize="{StaticResource FontSize}" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Name="label2" VerticalAlignment="Center" FontFamily="Tahoma Bold">Group Membership:</Label>
         <Border Margin="2,3,2,3" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" BorderThickness="2" Background="Azure" BorderBrush="MistyRose">
             <TextBlock x:Name="_txbGroupMembership"  FontSize="{StaticResource FontSize}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="{Binding Membership}" TextDecorations="None" TextWrapping="WrapWithOverflow" />
         </Border>
-        <Border Grid.Column="5" Grid.Row="1" Grid.RowSpan="5" BorderThickness="2" BorderBrush="MistyRose">
-            <Image x:Name="_userIcon"  Height="96" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Source="../../Images/user1.png" Stretch="Uniform"></Image>
+        <Border Height="135" CornerRadius="10" Grid.Column="5" Grid.Row="0" Grid.RowSpan="6" BorderBrush="MistyRose" BorderThickness="1">
+            <Canvas Margin="0,10,0,0">
+                <TextBlock Name="title" Text="ICON"  FontFamily="Tahoma Bold" Canvas.Left="11" Canvas.Top="5" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Name="close" Text="Edit O" Canvas.Top="4" Canvas.Right="5" FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Click to Select User Icon..."/>
+                <Path Name="line" Stroke="#FF777777" Fill="#FF777777" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="20" Canvas.Left="10" Width="96" Height="2" />
+                <Image Height="96" Width="90" Canvas.Left="13" Canvas.Top="24" Source="../../Images/user1.png" Stretch="Uniform" />
+            </Canvas>
         </Border>
     </Grid>
 </UserControl>

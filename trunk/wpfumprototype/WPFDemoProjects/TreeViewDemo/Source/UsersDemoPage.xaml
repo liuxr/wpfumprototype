@@ -9,7 +9,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ToolBarPanel x:Name="_toolbar" HorizontalAlignment="Right" Grid.Row="0">
+        <ToolBarPanel x:Name="_toolbar"  HorizontalAlignment="Left" Grid.Row="0" Width="770">
             <ToolBar Grid.Row="0">
                 <TextBlock>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/LinkStyleMainPage.xaml">
@@ -18,13 +18,13 @@
                 </TextBlock>
                 <Separator></Separator>
                 <TextBlock>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPageNew.xaml">
                     <Image Height="27" Source="../Images/user1_add.png"></Image>
                 </Hyperlink>  
                 <Hyperlink Command="{Binding Path=DeleteUserCommand}"  TextDecorations="None">
                     <Image Height="27" Source="../Images/user1_delete.png"></Image>
                 </Hyperlink>
-                    <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Hyperlink TextDecorations="None" IsEnabled="False" NavigateUri="pack://application:,,,/ErrorPage.xaml">
                     <Image Height="27" Source="../Images/user1_lock.png"></Image>
                 </Hyperlink>
                 </TextBlock>
@@ -35,11 +35,11 @@
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MockNavigatorPage.xaml">
                     <Image Height="27" Source="../Images/auction_hammer.png"></Image>
                 </Hyperlink>
                 <Separator></Separator>
-                <TextBox Width="40"></TextBox>
+                <TextBox  HorizontalAlignment="Right" Width="240">Input search text here(TBD)</TextBox>
             </ToolBar>
         </ToolBarPanel>
         <views:UserListView Grid.Row="1" x:Name="_userListView"></views:UserListView>

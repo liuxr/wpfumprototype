@@ -80,7 +80,7 @@ namespace TreeViewDemo.Controls
 
             // EID calls us with infinity, but framework doesn't like us to return infinity
             if (double.IsInfinity(availableSize.Height) || double.IsInfinity(availableSize.Width))
-                return new Size(600, 600);
+                return new Size(400, 400);
             else
                 return availableSize;
         }

@@ -41,14 +41,10 @@ namespace TreeViewDemo.Source.View
             {
                 _userViewModel = new UserViewModelNew();
                 Title = "Add User";
+                _userViewModel.IsReadOnlyUserName = true;
             }
 
             DataContext = _userViewModel;
-            
-            //_candidateGroupsTree.DataContext = _groupsTreeViewModel;
-
-            //membershipListBox.SelectionChanged += membershipListBox_SelectionChanged;
-            //membershipListBox.Loaded += membershipListBox_Loaded;
 
             CommandBindings.Add(new CommandBinding(NavigationCommands.BrowseHome, GoHomeExecuted, CommandCanExecute));
             CommandBindings.Add(new CommandBinding(NavigationCommands.BrowseBack, GoHomeExecuted, CommandCanExecute));

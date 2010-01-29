@@ -11,6 +11,7 @@ namespace TreeViewDemo.Source.ViewModel
     public class UserViewModelNew : BaseViewModel
     {
         private readonly User _user;
+        private bool _isReadonlyUserName = false;
 
         public UserViewModelNew()
             : this(null)
@@ -20,11 +21,11 @@ namespace TreeViewDemo.Source.ViewModel
         public UserViewModelNew(User user)
         {
             _user = user;
-            if(user == null)
+            if (user == null)
             {
                 _user = new User("<User Name>");
             }
-            
+
         }
 
         public User User
@@ -46,6 +47,18 @@ namespace TreeViewDemo.Source.ViewModel
                     _user.UserName = value;
                     OnPropertyChanged("UserName");
                 }
+            }
+        }
+
+        public bool IsReadOnlyUserName
+        {
+            get
+            {
+                return _isReadonlyUserName;
+            }
+            set
+            {
+                _isReadonlyUserName = value;
             }
         }
 
@@ -442,8 +455,9 @@ namespace TreeViewDemo.Source.ViewModel
             FakeDataService.DeleteUser(_user);
         }
 
-        public List<String> PreferredLanguagesList{ 
+        public List<String> PreferredLanguagesList
+        {
             get { return BusinessLib.DataModel.PreferredLanguage.Instance.SupportedLanguages; }
-            }
         }
+    }
 }

@@ -8,7 +8,7 @@
     </Page.Background>
     <Grid>
         <Canvas>
-            <Controls:Favourites Canvas.Left="50" Canvas.Top="50"/>
+            <Controls:Favourites Canvas.Left="60" Canvas.Top="120"/>
         </Canvas>
     </Grid>
 </Page>

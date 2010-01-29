@@ -10,31 +10,31 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ToolBarPanel HorizontalAlignment="Right" Grid.Row="0">
+        <ToolBarPanel HorizontalAlignment="Left" Grid.Row="0" Width="770">
             <ToolBar Grid.Row="0">
                 <TextBlock>
                 <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/LinkStyleMainPage.xaml">
-                    <Image Height="18" Source="../Images/home.png"></Image>
+                    <Image Height="27" Source="../Images/home.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
                 <TextBlock>
                     <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/Source/UsersDemoPage.xaml">
-                    <Image Height="18" Source="../Images/user1.png"></Image>
+                    <Image Height="27" Source="../Images/user1.png"></Image>
                 </Hyperlink>  
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPage.xaml">
-                    <Image Height="18" Source="../Images/user1_add.png"></Image>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/source/view/UserDetailPageNew.xaml">
+                    <Image Height="27" Source="../Images/user1_add.png"></Image>
                 </Hyperlink>  
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="../Images/user1_lock.png"></Image>
+                <Hyperlink IsEnabled="False" TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
+                    <Image Height="27" Source="../Images/user1_lock.png"></Image>
                 </Hyperlink>
                 </TextBlock>
                 <Separator></Separator>
-                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/ErrorPage.xaml">
-                    <Image Height="18" Source="../Images/auction_hammer.png"></Image>
+                <Hyperlink TextDecorations="None" NavigateUri="pack://application:,,,/MockNavigatorPage.xaml">
+                    <Image Height="27" Source="../Images/auction_hammer.png"></Image>
                 </Hyperlink>
                 <Separator></Separator>
-                <TextBox Width="40"></TextBox>
+                <TextBox Width="240"></TextBox>
             </ToolBar>
         </ToolBarPanel>
         <StackPanel x:Name="_searchPanel" Grid.Row="1" Margin="4" Orientation="Horizontal"

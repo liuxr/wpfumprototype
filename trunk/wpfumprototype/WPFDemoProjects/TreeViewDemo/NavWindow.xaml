@@ -1,5 +1,5 @@
 ﻿<NavigationWindow x:Class="TreeViewDemo.Window1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="User Manager" Source="LinkStyleMainPage.xaml">    
+    Title="User Manager" Source="MockNavigatorPage.xaml"  Width="805" Height="585">    
 </NavigationWindow>

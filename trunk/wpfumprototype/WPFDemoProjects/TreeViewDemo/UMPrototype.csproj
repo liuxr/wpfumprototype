@@ -314,15 +314,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Category\StandardCategory.10_Image.png" />
-    <Resource Include="Category\StandardCategory.11_Image.png" />
-    <Resource Include="Category\StandardCategory.12_Image.png" />
-    <Resource Include="Category\StandardCategory.13_Image.png" />
-    <Resource Include="Category\StandardCategory.14_Image.png" />
-    <Resource Include="Category\StandardCategory.15_Image.png" />
-    <Resource Include="Category\StandardCategory.16_Image.png" />
-    <Resource Include="Category\StandardCategory.19_Image.png" />
-    <Resource Include="Category\StandardCategory.1_Image.png" />
+    <Resource Include="Images\StandardCategory.10_Image.png" />
+    <Resource Include="Images\StandardCategory.11_Image.png" />
+    <Resource Include="Images\StandardCategory.12_Image.png" />
+    <Resource Include="Images\StandardCategory.13_Image.png" />
+    <Resource Include="Images\StandardCategory.14_Image.png" />
+    <Resource Include="Images\StandardCategory.15_Image.png" />
+    <Resource Include="Images\StandardCategory.16_Image.png" />
+    <Resource Include="Images\StandardCategory.19_Image.png" />
+    <Resource Include="Images\StandardCategory.1_Image.png" />
     <Content Include="F1.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -366,6 +366,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
+    <Folder Include="Category\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
