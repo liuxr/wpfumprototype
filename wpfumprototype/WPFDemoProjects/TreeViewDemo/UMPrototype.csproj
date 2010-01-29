@@ -326,6 +326,8 @@
     <Content Include="F1.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\UserPersonalIcon1.png" />
+    <Resource Include="Images\UserPersonalIcon2.png" />
     <Resource Include="Navigator.png" />
     <Resource Include="NavScreenShot.bmp" />
     <Resource Include="user1.png" />

@@ -12,7 +12,6 @@ namespace TreeViewDemo.Source.ViewModel
     {
         private readonly User _user;
         private bool _isReadonlyUserName = false;
-
         public UserViewModelNew()
             : this(null)
         {
@@ -21,11 +20,11 @@ namespace TreeViewDemo.Source.ViewModel
         public UserViewModelNew(User user)
         {
             _user = user;
+            // Create new and assign default value
             if (user == null)
             {
                 _user = new User("<User Name>");
             }
-
         }
 
         public User User
@@ -33,7 +32,7 @@ namespace TreeViewDemo.Source.ViewModel
             get { return _user; }
         }
 
-
+        
         public string UserName
         {
             get
@@ -59,6 +58,18 @@ namespace TreeViewDemo.Source.ViewModel
             set
             {
                 _isReadonlyUserName = value;
+            }
+        }
+
+        // Path to image
+        public string UserIcon
+        {
+            get
+            {
+                return _user.UserIcon;
+            } set
+            {
+                _user.UserIcon = value;
             }
         }
 
@@ -411,6 +422,7 @@ namespace TreeViewDemo.Source.ViewModel
                 clone.AddGroupMembership(new GroupViewModel(group));
             }
             clone.FullName = FullName;
+            clone.UserIcon = UserIcon;
             clone.Title = Title;
             clone.EnableStdAuthentication = EnableStdAuthentication;
             clone.Password = Password;

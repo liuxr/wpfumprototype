@@ -36,12 +36,13 @@ namespace TreeViewDemo.Source.View
                 _originalUserModel = userViewModel;
                 Title = "User Details";
                 //_userNameTbx.IsEnabled = false;
+                _userViewModel.IsReadOnlyUserName = true;
             }
             else
             {
                 _userViewModel = new UserViewModelNew();
                 Title = "Add User";
-                _userViewModel.IsReadOnlyUserName = true;
+                
             }
 
             DataContext = _userViewModel;
