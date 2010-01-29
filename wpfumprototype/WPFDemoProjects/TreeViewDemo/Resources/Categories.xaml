@@ -3,12 +3,12 @@
     <XmlDataProvider x:Key="Categories" XPath="Categories/Category">
         <x:XData>
             <Categories xmlns="">
+                <Category Image="users3.png" MenuItem="User Manager(OGS)"/>
                 <Category Image="StandardCategory.1_Image.png" MenuItem="Demo Item(Empty)"/>
                 <Category Image="StandardCategory.10_Image.png" MenuItem="Demo Item(Empty)"/>
                 <Category Image="StandardCategory.15_Image.png" MenuItem="Demo Item(Empty)"/>
                 <Category Image="StandardCategory.16_Image.png" MenuItem="Demo Item(Empty)"/>
-                <Category Image="StandardCategory.19_Image.png" MenuItem="Demo Item(Empty)"/>
-                <Category Image="users3.png" MenuItem="User Manager(OGS)"/>                
+                <Category Image="StandardCategory.19_Image.png" MenuItem="Demo Item(Empty)"/>                
             </Categories>
         </x:XData>
     </XmlDataProvider>
