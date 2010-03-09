@@ -1,0 +1,64 @@
+<Configuration>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:SystemsUnion.Security.Common.User">
+      <Item value="PreferedLanguage" priority="1" />
+      <Item value="UserName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MsHtmHstInterop.ICustomDoc">
+      <Item value="SetUIHandler" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="0" />
+      <Item value="Empty" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AxSHDocVw.AxWebBrowser">
+      <Item value="Document" priority="0" />
+      <Item value="Navigate2" priority="0" />
+      <Item value="BeforeNavigate2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SystemsUnion.Security.Common.AuthenticatedUserCredentials">
+      <Item value="User" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SystemsUnion.Security.Common.ISecurityService">
+      <Item value="AuthenticateUser" priority="0" />
+      <Item value="AuthenticatedCredentials" priority="1" />
+      <Item value="Users" priority="0" />
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WebBrowserCtrl.MyWebBrowser">
+      <Item value="Navigator2" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <EditorManager>
+    <RecentFiles>
+      <File id="6B719519-F4E4-48CC-A835-0A2A22BB0025/f:Form1.Designer.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="6B719519-F4E4-48CC-A835-0A2A22BB0025/f:Form1.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="6B719519-F4E4-48CC-A835-0A2A22BB0025/f:Program.cs" caret="0" visual-x="0" visual-y="0" />
+    </RecentFiles>
+  </EditorManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <ReFormatCode>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+    <DecorateModifiers>False</DecorateModifiers>
+  </ReFormatCode>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+</Configuration>
