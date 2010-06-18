@@ -1,0 +1,15 @@
+﻿<Window x:Class="XMLDemo.LoadXMLWindow
+        "
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="300">
+    <Grid>
+        <RadioButton Name="_urlBtn" Height="16" Margin="45,39,113,0" VerticalAlignment="Top">URL</RadioButton>
+        <RadioButton Name="_streamBtn" Height="16" Margin="45,61,113,0" VerticalAlignment="Top">Stream</RadioButton>
+        <RadioButton Name="_stringBtn" Margin="45,83,113,0" Height="16" VerticalAlignment="Top">String</RadioButton>
+        <Label Height="28" Margin="20,5,105,0" Name="label1" VerticalAlignment="Top" FontSize="12" Foreground="Blue">Open XML document from:</Label>
+        <Label Margin="20,105,138,129" Name="label2" FontSize="11" Foreground="Brown">Enter Path or String:</Label>
+        <TextBox Height="80" Margin="20,0,12,43" Name="_inputTbx" VerticalAlignment="Bottom" />
+        <Button Height="23" Margin="89,0,89,14" Name="_openBtn" VerticalAlignment="Bottom" Click="_openBtn_Click">Open Document</Button>
+    </Grid>
+</Window>

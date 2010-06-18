@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLDemo", "XMLDemo\XMLDemo.csproj", "{BD30A4C1-4026-4057-AA5C-0B79554397FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD30A4C1-4026-4057-AA5C-0B79554397FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD30A4C1-4026-4057-AA5C-0B79554397FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD30A4C1-4026-4057-AA5C-0B79554397FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD30A4C1-4026-4057-AA5C-0B79554397FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

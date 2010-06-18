@@ -1,0 +1,12 @@
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\bin\Debug\XMLDemo.exe
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\bin\Debug\XMLDemo.pdb
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\App.g.cs
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo_MarkupCompile.cache
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo.g.resources
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo.Properties.Resources.resources
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo.csproj.GenerateResource.Cache
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo.exe
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\XMLDemo.pdb
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\LoadXMLWindow.baml
+C:\Documents and Settings\yyao\Local Settings\Application Data\Temporary Projects\XMLDemo\obj\Debug\LoadXMLWindow.g.cs
